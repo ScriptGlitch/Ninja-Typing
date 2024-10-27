@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-..." crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&family=Satisfy&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="Assets/CSS/style.css">
+    <title>Ninja Typing</title>
+</head>
+<body>
+    <header style="display:flex;align-items:center;padding:10px">
+        <div style="flex-grow:1;display:flex;align-items:center"><span class="logo-t">Ninja Typing</span></div>
+        <button class="menu-toggle" id="menu-toggle"><i class="fas fa-bars"></i></button>
+    </header>
+    <div class="off-canvas-menu" id="off-canvas-menu"><button class="close-menu" id="close-menu"><i class="fas fa-times"></i></button><span class="s-text">Settings</span>
+        <div class="s-item">
+            <div class="language-selection" id="language-selection">
+                <div class="form-group"><span><i class="fas fa-globe"></i>Language</span><select id="language"
+                        class="form-field">
+                        <option value="bangla">Bangla</option>
+                        <option value="english">English</option>
+                        <option value="custom">Custom Text</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        <div class="custom-text-group"><label for="custom-text"><i class="fas fa-keyboard"></i>Custom Text</label><textarea id="custom-text" rows="3" cols="50" placeholder="Enter your custom text here..."></textarea></div>
+        <label for="speed-slider" class="slider-label">Typing Speed (Characters per Key Press) >> </label> <span id="speed-value" class="slider-value">3x</span> <br>
+        <input type="range" id="speed-slider" min="1" max="5" value="3" class="custom-slider">
+        <button id="start-button" class="button-ka">Start Typing</button>
+    </div>
+    <div id="description" class="description">
+        <img src="Assets/Image/hakkker.gif" alt="Hacking Animation" style="max-width: 100%; height: 200px; border-radius: 500px; margin-bottom: -20px;">
+        <p class="heading">What is Ninja Typing?</p>
+        <p>Ninja Typing is a typing environment designed to give you the exhilarating illusion of being a speed typist, just like in hacking movies. With a simple press of any key, you’ll see predefined text appear on the screen, making it look like you’re typing at lightning speed. You can also add your <span style="color: yellow">own custom text</span> from the language dropdown menu.</p>
+        <button id="description-menu-toggle">Activate Ninja Mode</button>
+    </div>
+    <div class="terminal" id="terminal" style="display:none"><span id="wpm-display" style="display:none">WPM: 0</span>
+        <div class="output" id="output"></div>
+        <div class="input-line"><span class="prompt">></span><span id="typedText"></span><input type="text" id="input" autofocus autocorrect="off" autocapitalize="off" autocomplete="off" spellcheck="false" disabled="disabled"></div>
+    </div>
+    <div id="result-container" style="display:none">
+        <h2 id="final-wpm"></h2><button id="do-again-button">Try Again</button><button id="reload-button">Reset All</button>
+    </div>
+    <footer class="footer">
+        <span style="color: #fff">Coded by @ </span>
+        <span><a href="https://www.facebook.com/fxnuub">Kawsar Ahmed</a></span>
+        <span style="color: #fff"> | </span>
+        <a href="https://github.com/ScriptGlitch/Ninja-Typing" target="_blank">Source Code</a>
+    </footer>
+    <script src="Assets/Script/script.js"></script>
+</body>
+</html>
